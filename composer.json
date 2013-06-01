@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://dcavuotti@bitbucket.org/dcavuotti/batchio.git"
+        }
+    ],
+    "require": {
+        "asphxia/batchio": "dev-composer-package",
+        "silex/silex": "1.0.*"
+    }
+}
