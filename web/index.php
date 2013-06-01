@@ -13,11 +13,12 @@ $configuration = array(
     'max_attemps' => 0,
     'attemps_delay' => 0
 );
-$app->get('/twilio/callback.me', function (Request $request) use ($configuration) {    
+
+$app->post('/twilio/callback.me', function (Request $request) use ($configuration) {    
 
     $syncr = new Syncr\Drivers\Db();
     $syncr->bootstrap($configuration);
-
+    
     $status = array(
         'sid'       => $request->get('SmsSid'),
         'status'    => $request->get('SmsStatus'),
